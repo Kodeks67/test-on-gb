@@ -16,7 +16,7 @@
 
 string GenerateStringElement()
 {
-    var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*-_+={}|<>.,/?~` ";
+    var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*-_+={}|<>.,/?~`";
 
     var random = new Random();
     var stringChars = new char[random.Next(1, 8)];
