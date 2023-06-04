@@ -7,7 +7,7 @@
     {
         if (array[i].Length <= 3 && array[i] != null)
         {
-           new_array[i] += array[i];
+            new_array[i] += array[i];
             // new_size++;
         }
     }
@@ -16,7 +16,7 @@
 
 string GenerateStringElement()
 {
-    var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_+=[]{}|<>.,/?~` ";
+    var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*-_+={}|<>.,/?~`";
 
     var random = new Random();
     var stringChars = new char[random.Next(1, 8)];
@@ -40,12 +40,24 @@ void FillArray(string[] elements)
     }
 }
 
+void PrintElement(string element)
+{
+    System.Console.Write($"\"{element}\"");
+}
+
 void PrintArray(string[] elements)
 {
     System.Console.Write("[");
     for (int i = 0; i < elements.Length; i++)
     {
-        System.Console.Write($"\"{elements[i]}\", ");
+        if (i == elements.Length - 1)
+            // System.Console.Write($"\"{elements[i]}\"");
+            PrintElement(elements[i]);
+        else
+        {
+            PrintElement(elements[i]);
+            System.Console.Write($", ");
+        }
     }
     System.Console.WriteLine("]");
 }
