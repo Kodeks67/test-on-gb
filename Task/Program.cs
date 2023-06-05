@@ -7,11 +7,11 @@
     {
         if (array[i].Length <= 3 && array[i] != null)
         {
-            new_array[i] += array[i];
+            newArray[i] += array[i];
             
         }
     }
-    return new_array.Where(x => x != null).ToArray();
+    return newArray.Where(x => x != null).ToArray();
 }
 
 string GenerateStringElement()
